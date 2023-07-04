@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     fontFamily: { 
        'Alegreya': ['Alegreya', 'serif'],
+       'Plov': ["Plov"]
     },
     extend: {
       backgroundImage: {
