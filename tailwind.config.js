@@ -1,17 +1,17 @@
 /* @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.html"],
+  content: ['./**/*.html'],
   // content: ["./index.html"],
   theme: {
-    fontFamily: { 
-       'Alegreya': ['Alegreya', 'serif'],
-       'Plov': ["Plov"]
+    fontFamily: {
+      Alegreya: ['Alegreya'],
+      Plov: ['Plovdiv Display'],
     },
     extend: {
       backgroundImage: {
-        "block-one-bg": "url(../images/BackroundHeader.png)",
+        'block-one-bg': 'url(../images/BackroundHeader.png)',
       },
-      colors: {"coralred": "#E46358"}
+      colors: { coralred: '#E46358' },
     },
   },
   plugins: [],
