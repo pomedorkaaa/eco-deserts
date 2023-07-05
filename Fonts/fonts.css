@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap');
+
+@font-face {
+  font-family: 'Plovdiv Display';
+  src: url('./Plovdiv-Display/PlovdivDisplay-Bold.eot');
+  src: url('./PlovdivDisplay/PlovdivDisplay-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('./Plovdiv-Display/PlovdivDisplay-Bold.woff2') format('woff2'),
+    url('./Plovdiv-Display/PlovdivDisplay-Bold.woff') format('woff'),
+    url('./Plovdiv-Display/PlovdivDisplay-Bold.ttf') format('truetype'),
+    url('./Plovdiv-Display/PlovdivDisplay-Bold.svg#PlovdivDisplay-Bold')
+      format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

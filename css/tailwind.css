@@ -556,6 +556,10 @@ video {
   }
 }
 
+.collapse {
+  visibility: collapse;
+}
+
 .absolute {
   position: absolute;
 }
@@ -597,8 +601,20 @@ video {
   margin-top: 16rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
+}
+
+.hidden {
+  display: none;
 }
 
 .w-2\/3 {
@@ -621,6 +637,10 @@ video {
   width: 100%;
 }
 
+.border-collapse {
+  border-collapse: collapse;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -639,6 +659,10 @@ video {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .bg-coralred {
@@ -686,11 +710,11 @@ video {
 }
 
 .font-Alegreya {
-  font-family: Alegreya, serif;
+  font-family: Alegreya;
 }
 
 .font-Plov {
-  font-family: Plov;
+  font-family: Plovdiv Display;
 }
 
 .text-2xl {
