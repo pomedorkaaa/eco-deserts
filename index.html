@@ -9,7 +9,12 @@
 
     <!-- <link rel="stylesheet" href="./css/tailwind.css" /> -->
     <link rel="stylesheet" href="./css/tailwind.css" />
-    <link rel="stylesheet" href="./Fonts/fonts.css" type="text/css" charset="utf-8"/>
+    <link
+      rel="stylesheet"
+      href="./Fonts/fonts.css"
+      type="text/css"
+      charset="utf-8"
+    />
     <link rel="stylesheet" href="./css/style.css" />
 
     <!-- <script src="./scripts/tailwind.js"></script> -->
@@ -20,23 +25,23 @@
 
   <body>
     <header class="absolute w-full z-50">
-      <div class="container mx-auto flex justify-between px-8 py-4">
+      <div class="container mx-auto flex justify-between py-4 px-8">
         <img src="./images/logo.svg" alt="" />
         <img src="./images/burger.svg" alt="" />
       </div>
     </header>
 
-    <main class="w-full">
-      <div class="relative">
+    <main class="w-full relative">
+      <img
+        src="./images/main-bg.jpg"
+        alt=""
+        class="-z-20 fixed top-0 min-h-screen object-cover"
+      />
+      <div id="block-one" class="relative">
         <!-- Фон главной -->
-        <img
-          class="w-full absolute -z-10"
-          src="./images/BackroundHeader.png"
-          alt=""
-        />
+        <img class="w-full" src="./images/BackroundHeader.png" alt="" />
         <div
-          id="block-one"
-          class="container mx-auto flex flex-col items-center pt-20 pb-10 z-10"
+          class="top-0 right-0 left-0 container absolute mx-auto flex flex-col items-center pt-20 pb-10 z-10"
         >
           <img src="./images/eco-deserts.svg" class="w-3/4" alt="Экодесерты" />
           <img
@@ -51,20 +56,63 @@
           >
             Заказать
           </button>
-          <img src="./images/About.svg" class="mt-32 pb-0" alt="" />
         </div>
-        <div
-          id="block-two"
-          class="container mx-auto flex flex-col items-center pt-5 z-10 pb-8 ">
-          <img src="./images/Cacke 1 (2).jpg" class="rounded-full w-2/3 drop-shadow-xl" alt="">
-          <h6 class="mt-4 text-xl uppercase text-coralred font-Plov" >Название</h6>
-          <p class="text-center text-xs w-2/3 mt-3 font-Alegreya">Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet.</p>
-          <img src="./images/Cacke 1 (2).jpg" class="rounded-full w-2/3 mt-64 drop-shadow-xl" alt="">
-          <img src="./images/Cacke 1 (2).jpg" class="rounded-full w-2/3 mt-64 drop-shadow-xl" alt="">
-        
       </div>
-          
+
+      <div
+        id="block-two"
+        class="flex flex-col items-center z-1 container mx-auto py-4 px-8"
+      >
+        <h3 class="font-Plov text-coralred text-2xl text-center">
+          Десерты со вкусом волшебства!
+        </h3>
+        <div
+          id="block-two-ul"
+          class="flex flex-row justify-center w-full gap-12 my-4"
+        >
+          <ul
+            class="font-Plov text-chocolate list-disc list-inside leading-4 space-y-1.5 marker:text-coralred marker:text-xl marker:leading-3"
+          >
+            <li>Шоколад</li>
+            <li>Кексы</li>
+            <li>Торты</li>
+            <li>Конфеты</li>
+            <li>Эклеры</li>
+          </ul>
+          <div id="zahar" class="w-max">
+            <p class="font-Cleopatra text-coralred text-7xl text-center">0%</p>
+            <p class="font-BrushType text-coralred text-5xl leading-7">
+              сахара
+            </p>
+          </div>
         </div>
+      </div>
+
+      <div
+        id="block-three"
+        class="container mx-auto flex flex-col items-center pt-5 z-10 pb-8"
+      >
+        <!-- <img src="./images/About.svg" class="mt-2 mb-6 pb-0" alt="" /> -->
+        <img
+          src="./images/Cacke 1 (2).jpg"
+          class="rounded-full w-2/3 drop-shadow-xl"
+          alt=""
+        />
+        <h6 class="mt-4 text-xl uppercase text-coralred font-Plov">Название</h6>
+        <p class="text-center text-xs w-2/3 mt-3 font-Alegreya">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum
+          dolor sit amet.
+        </p>
+        <img
+          src="./images/Cacke 1 (2).jpg"
+          class="rounded-full w-2/3 mt-64 drop-shadow-xl"
+          alt=""
+        />
+        <img
+          src="./images/Cacke 1 (2).jpg"
+          class="rounded-full w-2/3 mt-64 drop-shadow-xl"
+          alt=""
+        />
       </div>
     </main>
 

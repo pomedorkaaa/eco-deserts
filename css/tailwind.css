@@ -560,6 +560,10 @@ video {
   visibility: collapse;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -568,8 +572,20 @@ video {
   position: relative;
 }
 
-.-z-10 {
-  z-index: -10;
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.-z-20 {
+  z-index: -20;
 }
 
 .z-10 {
@@ -585,12 +601,21 @@ video {
   margin-right: auto;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.mt-32 {
-  margin-top: 8rem;
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .mt-4 {
@@ -617,6 +642,10 @@ video {
   display: none;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-2\/3 {
   width: 66.666667%;
 }
@@ -637,8 +666,29 @@ video {
   width: 100%;
 }
 
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .border-collapse {
   border-collapse: collapse;
+}
+
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-outside {
+  list-style-position: outside;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -649,8 +699,28 @@ video {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-1\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));
 }
 
 .rounded-2xl {
@@ -668,6 +738,11 @@ video {
 .bg-coralred {
   --tw-bg-opacity: 1;
   background-color: rgb(228 99 88 / var(--tw-bg-opacity));
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .px-8 {
@@ -713,6 +788,14 @@ video {
   font-family: Alegreya;
 }
 
+.font-BrushType {
+  font-family: BrushType;
+}
+
+.font-Cleopatra {
+  font-family: Cleopatra;
+}
+
 .font-Plov {
   font-family: Plovdiv Display;
 }
@@ -720,6 +803,16 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
 }
 
 .text-xl {
@@ -736,6 +829,19 @@ video {
   text-transform: uppercase;
 }
 
+.leading-4 {
+  line-height: 1rem;
+}
+
+.leading-7 {
+  line-height: 1.75rem;
+}
+
+.text-chocolate {
+  --tw-text-opacity: 1;
+  color: rgb(106 32 33 / var(--tw-text-opacity));
+}
+
 .text-coralred {
   --tw-text-opacity: 1;
   color: rgb(228 99 88 / var(--tw-text-opacity));
@@ -749,4 +855,30 @@ video {
 .drop-shadow-xl {
   --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.marker\:text-xl *::marker {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.marker\:leading-3 *::marker {
+  line-height: .75rem;
+}
+
+.marker\:text-coralred *::marker {
+  color: rgb(228 99 88 );
+}
+
+.marker\:text-xl::marker {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.marker\:leading-3::marker {
+  line-height: .75rem;
+}
+
+.marker\:text-coralred::marker {
+  color: rgb(228 99 88 );
 }
