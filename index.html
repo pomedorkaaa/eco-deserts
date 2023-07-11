@@ -20,16 +20,33 @@
     <!-- <script src="./scripts/tailwind.js"></script> -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="./tailwind.config.js"></script>
+    <script src="./scripts/jquery-3.7.0.slim.min.js" defer></script>
     <script src="./scripts/script.js" defer></script>
   </head>
 
   <body>
     <header class="absolute w-full z-50">
-      <div class="container mx-auto flex justify-between py-4 px-8">
+      <div
+        class="container mx-auto flex justify-between py-4 px-8 hamburger-menu"
+      >
         <img src="./images/logo.svg" alt="" />
         <img src="./images/burger.svg" alt="" />
       </div>
+      <div class="hamburger-menu">
+        <div class="hamburger"></div>
+      </div>
     </header>
+    <navbar class="sliding-navbar">
+      <div id="cross" class="cross">
+        <img src="./images/cross.svg" alt="" />
+      </div>
+      <ul class="navbar--items">
+        <li class="navbar--item">Item 1</li>
+        <li class="navbar--item">Item 2</li>
+        <li class="navbar--item">Item 3</li>
+      </ul>
+    </navbar>
+    <div class="mask"></div>
 
     <main class="w-full relative">
       <img
