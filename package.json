@@ -5,12 +5,14 @@
   "main": "tailwind.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailStart": "npx tailwindcss -i ./input.css -o ./css/tailwind.css --watch"
+    "tailBuild": "npx tailwindcss -i ./input.css -o ./css/tailwind.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.4.0",
     "tailwindcss": "^3.3.2"
   }
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
     <title>Экодесерты</title>
     <link rel="shortcut icon" href="./images/12644-2.ico" type="image/x-icon" />
 
-    <!-- <link rel="stylesheet" href="./css/tailwind.css" /> -->
+    <link rel="stylesheet" href="./css/tailwind.css" />
     <link rel="stylesheet" href="./css/tailwind.css" />
     <link
       rel="stylesheet"
@@ -19,6 +19,7 @@
 
     <!-- <script src="./scripts/tailwind.js"></script> -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
     <script src="./tailwind.config.js"></script>
     <script src="./scripts/jquery-3.7.0.slim.min.js" defer></script>
     <script src="./scripts/script.js" defer></script>
@@ -54,18 +55,19 @@
         alt=""
         class="-z-20 fixed top-0 min-h-screen object-cover"
       />
-      <div id="block-one" class="relative">
+      <div
+        id="block-one"
+        class="relative bg-block-one-bg-y bg-cover bg-bottom-5 bg-no-repeat md:bg-block-one-bg-x"
+      >
         <!-- Фон главной -->
-        <img class="w-full" src="./images/BackroundHeader.png" alt="" />
+        <!-- <img class="w-full" src="./images/BackroundHeader.png" alt="" /> -->
         <div
-          class="top-0 right-0 left-0 container absolute mx-auto flex flex-col items-center pt-20 pb-10 z-10"
+          class="container mx-auto flex flex-col items-center pt-20 z-10 gap-3"
         >
           <img src="./images/eco-deserts.svg" class="w-3/4" alt="Экодесерты" />
-          <img
-            src="./images/from-Valentine.svg"
-            class="w-3/6 mt-3"
-            alt="От Валентины"
-          />
+          <p class="text-chocolate font-Plov text-4xl sm:text-5xl md:text-6xl">
+            от Валентины
+          </p>
           <img src="./images/block_one_img2.png" alt="Cacke" />
           <button
             class="bg-coralred rounded-2xl py-3 text-white uppercase w-3/5 drop-shadow-xl font-Alegreya text-2xl"
@@ -73,6 +75,7 @@
           >
             Заказать
           </button>
+          <img class="" src="./images/block-one-arrow.svg" alt="" />
         </div>
       </div>
 
@@ -107,29 +110,56 @@
 
       <div
         id="block-three"
-        class="container mx-auto flex flex-col items-center pt-5 z-10 pb-8"
+        class="container mx-auto grid grid-cols-1 pt-5 z-10 pb-8 lg:grid-cols-3 gap-20"
       >
-        <!-- <img src="./images/About.svg" class="mt-2 mb-6 pb-0" alt="" /> -->
-        <img
-          src="./images/Cacke 1 (2).jpg"
-          class="rounded-full w-2/3 drop-shadow-xl"
-          alt=""
-        />
-        <h6 class="mt-4 text-xl uppercase text-coralred font-Plov">Название</h6>
-        <p class="text-center text-xs w-2/3 mt-3 font-Alegreya">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum
-          dolor sit amet.
-        </p>
-        <img
-          src="./images/Cacke 1 (2).jpg"
-          class="rounded-full w-2/3 mt-64 drop-shadow-xl"
-          alt=""
-        />
-        <img
-          src="./images/Cacke 1 (2).jpg"
-          class="rounded-full w-2/3 mt-64 drop-shadow-xl"
-          alt=""
-        />
+        <div class="cacke flex flex-col items-center gap-4">
+          <img
+            src="./images/Cacke 1 (2).jpg"
+            class="rounded-full w-2/3 drop-shadow-xl"
+            alt=""
+          />
+          <h6
+            class="text-center text-2xl uppercase text-coralred font-Plov max-w-max"
+          >
+            Название
+          </h6>
+          <p class="text-center text-xs w-2/3 font-Alegreya">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum
+            dolor sit amet.
+          </p>
+        </div>
+        <div class="cacke flex flex-col items-center gap-4">
+          <img
+            src="./images/Cacke 1 (2).jpg"
+            class="rounded-full w-2/3 drop-shadow-xl"
+            alt=""
+          />
+          <h6
+            class="text-center text-2xl uppercase text-coralred font-Plov max-w-max"
+          >
+            Название
+          </h6>
+          <p class="text-center text-xs w-2/3 font-Alegreya">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum
+            dolor sit amet.
+          </p>
+        </div>
+        <div class="cacke flex flex-col items-center gap-4">
+          <img
+            src="./images/Cacke 1 (2).jpg"
+            class="rounded-full w-2/3 drop-shadow-xl"
+            alt=""
+          />
+          <h6
+            class="text-center text-2xl uppercase text-coralred font-Plov max-w-max"
+          >
+            Название
+          </h6>
+          <p class="text-center text-xs w-2/3 font-Alegreya">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum
+            dolor sit amet.
+          </p>
+        </div>
       </div>
     </main>
 
