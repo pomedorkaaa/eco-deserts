@@ -57,30 +57,38 @@
       />
       <div
         id="block-one"
-        class="bg-center relative mb-16 flex min-h-screen flex-col items-center justify-center rounded-b-2xl bg-block-one-bg-y bg-cover bg-no-repeat md:rounded-b-3xl md:bg-block-one-bg-x"
+        class="bg-center relative mb-16 flex flex-col items-center justify-center rounded-b-2xl bg-block-one-bg-y bg-cover bg-no-repeat md:rounded-b-3xl md:bg-block-one-bg-x"
+        style="height: 100dvh; transition: 0.5s"
       >
         <!-- Фон главной -->
         <!-- <img class="w-full" src="./images/BackroundHeader.png" alt="" /> -->
         <div
-          class="container z-10 mx-auto flex min-h-[80vh] flex-col items-center justify-center py-10"
+          class="container z-10 mx-auto flex flex-col items-center justify-center py-[5vmin]"
         >
-          <div class="flex w-full flex-col items-center gap-1">
+          <div
+            class="flex h-max w-full flex-col items-center justify-center gap-1"
+          >
             <img
               src="./images/eco-deserts.svg"
-              class="w-3/4 max-w-3xl"
+              class="w-[75vmin] max-w-3xl flex-shrink"
               alt="Экодесерты"
             />
-            <p class="font-Plov text-3xl text-chocolate sm:text-4xl">
+            <!-- <p class="font-Plov text-3xl text-chocolate sm:text-4xl">
               от Валентины
-            </p>
+            </p> -->
+            <img
+              class="w-[45vmin]"
+              src="./images/from-Valentine.svg"
+              alt="от Валентины"
+            />
           </div>
           <img
-            class="w-4/5 max-w-2xl"
+            class="w-[80vmin] max-w-2xl"
             src="./images/block_one_img.png"
             alt="Cacke"
           />
           <button
-            class="mt-7 w-3/5 max-w-md rounded-2xl bg-coralred py-3 font-Alegreya text-2xl uppercase text-white drop-shadow-xl"
+            class="mt-5 w-[60vmin] max-w-md rounded-2xl bg-coralred py-3 font-Alegreya text-2xl uppercase text-white drop-shadow-xl"
             style="text-shadow: rgba(0, 0, 0, 0.225) 2px 2px"
           >
             Заказать
@@ -193,6 +201,18 @@
             </p>
           </div>
         </div>
+      </div>
+
+      <div id="block-four" class="container my-10 flex flex-col gap-6 px-8">
+        <h2 class="text-center text-4xl font-bold uppercase text-coralred">
+          О продукции
+        </h2>
+        <p class="text-center font-Alegreya text-chocolate">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non porro
+          magnam officiis doloremque eum harum, iste laudantium saepe dolorum
+          minus nam nemo deleniti quo corporis rerum! Officiis commodi eos
+          soluta autem earum quaerat recusandae vero.
+        </p>
       </div>
     </main>
 
