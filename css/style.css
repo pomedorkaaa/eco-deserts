@@ -80,7 +80,7 @@
   height: 3px;
 }
 .hamburger:before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: 10px;
@@ -88,7 +88,7 @@
   transition: bottom 0.3s ease-in-out;
 }
 .hamburger:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 10px;
@@ -125,4 +125,3 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
