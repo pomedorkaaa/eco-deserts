@@ -1,4 +1,4 @@
-$('#slider').slick({
+$("#slider").slick({
   autoplay: true,
   autoplaySpeed: 4000,
   speed: 500,
@@ -8,12 +8,12 @@ $('#slider').slick({
   variableWidth: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  mobileFirst: true,
   initialSlide: 1,
+  mobileFirst: true,
   responsive: [
     {
       breakpoint: 768,
-      settings: 'unslick',
+      settings: "unslick",
     },
   ],
 });
