@@ -45,6 +45,7 @@ module.exports = {
       },
       colors: {
         coralred: "#E46358",
+        coraldark: "#C2574D",
         chocolate: "#6A2021",
         "light-choco": "#DBAB83",
       },
