@@ -15,28 +15,10 @@
       charset="utf-8"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- Добавляем стили из CDN -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="slick-master/slick/slick.css"
-    />
-    <!-- Добавляем тему по умолчанию из CDN -->
-    <!-- <link
-      rel="stylesheet"
-      type="text/css"
-      href="slick-master/slick/slick-theme.css"
-    /> -->
+    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
 
-    <!-- <script src="./scripts/tailwind.js"></script> -->
-
-    <!-- <script src="./tailwind.config.js" defer></script> -->
-    <script src="./scripts/jquery-3.7.0.slim.min.js" defer></script>
-    <script
-      type="text/javascript"
-      src="slick-master/slick/slick.min.js"
-      defer
-    ></script>
+    <script src="./scripts/jquery-3.7.0.min.js" defer></script>
+    <script type="text/javascript" src="./scripts/slick.min.js" defer></script>
     <script src="./scripts/script.js" defer></script>
     <script src="./scripts/sliders.js" defer></script>
   </head>
@@ -107,7 +89,7 @@
             class="btn-primary w-[60vmin] max-w-md mt-5 text-2xl"
             style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"
           >
-            Заказать
+            <a href="./pages/cart.html"> Заказать</a>
           </button>
         </div>
         <img
@@ -215,13 +197,15 @@
         >
           О продукции
         </h2>
-        <p
-          class="text-center font-Alegreya text-chocolate md:text-xl 2xl:text-2xl"
-        >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non porro
-          magnam officiis doloremque eum harum, iste laudantium saepe dolorum
-          minus nam nemo deleniti quo corporis rerum! Officiis commodi eos
-          soluta autem earum quaerat recusandae vero.
+        <p class="about-txt">
+          Мои ПП торты – это только полезные и полностью натуральные
+          ингредиенты. Такие торты являются отличным выбором для людей, следящих
+          за своим питанием и заботящихся о своем здоровье. Они богаты
+          клетчаткой и белком, дарят долгое чувство сытости и легкости, а
+          главное, без чувства вины и лишних кг на весах. Мои ПП торты -это
+          сочетание сладости, свежести и питательности, что делает их идеальным
+          десертом для различных мероприятий и праздников. Получайте радость,
+          удовольствие и пользу от каждого кусочка.
         </p>
       </section>
 
@@ -268,9 +252,7 @@
             Организация вкусных мастер-классов по созданию шоколадных конфет на
             любой случай и праздник
           </p>
-          <p
-            class="max-w-[1080px] px-8 text-center font-Alegreya text-chocolate md:text-xl 2xl:text-2xl"
-          >
+          <p class="max-w-[1080px] px-8 about-txt">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non porro
             magnam officiis doloremque eum harum, iste laudantium saepe dolorum
             minus nam nemo deleniti quo corporis rerum! Officiis commodi eos
@@ -314,9 +296,7 @@
             >
               Обо мне
             </h2>
-            <p
-              class="text-center font-Alegreya text-chocolate md:text-xl 2xl:text-2xl"
-            >
+            <p class="about-txt">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
               porro magnam officiis doloremque eum harum, iste laudantium saepe
               dolorum minus nam nemo deleniti quo corporis rerum! Officiis

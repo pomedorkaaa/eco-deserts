@@ -634,6 +634,27 @@ video {
   }
 }
 
+.about-txt {
+  text-align: center;
+  font-family: Alegreya;
+  --tw-text-opacity: 1;
+  color: rgb(106 32 33 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .about-txt {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .about-txt {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
 .pointer-events-none {
   pointer-events: none;
 }
@@ -872,10 +893,6 @@ video {
   flex-direction: column;
 }
 
-.items-start {
-  align-items: flex-start;
-}
-
 .items-center {
   align-items: center;
 }
@@ -1047,10 +1064,6 @@ video {
 
 .text-right {
   text-align: right;
-}
-
-.font-Alegreya {
-  font-family: Alegreya;
 }
 
 .font-BrushType {

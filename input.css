@@ -12,4 +12,7 @@
   .cacke-desc {
     @apply text-center font-Alegreya lg:text-base 2xl:text-lg !leading-snug;
   }
+  .about-txt {
+    @apply text-center font-Alegreya text-chocolate md:text-xl 2xl:text-2xl;
+  }
 }
