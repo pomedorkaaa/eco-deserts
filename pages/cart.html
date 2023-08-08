@@ -1,33 +1,47 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open Cart</title>
+    <script src="../scripts/jquery-3.7.0.min.js"></script>
     <script src="../scripts/local-storage-cart.js" defer></script>
     <script src="../scripts/cart.js" defer></script>
     <!-- <link rel="stylesheet" href="../css/style.css" /> -->
-    <link rel="stylesheet" href="../css/tailwind.css" />
     <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/tailwind.css" />
+    <link rel="stylesheet" href="../Fonts/fonts.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="products">
-        <p>Products</p>
-        <ul class="products-list"></ul>
+    <header class="h-24 flex justify-center items-center bg-coralred">
+      Место для хедера
+    </header>
+
+    <main class="relative w-full">
+      <img
+        src="../images/main-bg.jpg"
+        alt=""
+        class="pointer-events-none fixed top-0 -z-20 min-h-screen object-cover"
+      />
+      <div class="container">
+        <div class="products">
+          <p>Products</p>
+          <ul class="products-list"></ul>
+        </div>
+
+        <table class="table">
+          <tbody class="cart"></tbody>
+          <tfoot>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="text-right">Total: <strong class="total"></strong></td>
+            <td></td>
+          </tfoot>
+        </table>
       </div>
-      <table class="table">
-        <tbody class="cart"></tbody>
-        <tfoot>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="text-right">Total: <strong class="total"></strong></td>
-          <td></td>
-        </tfoot>
-      </table>
-    </div>
+    </main>
   </body>
 </html>

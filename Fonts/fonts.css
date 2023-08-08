@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: 'BrushType';
-  src: url('./BrushType-SemiBold/');
+  src: url('./BrushType-SemiBold/BrushType-SemiBold.eot');
   src: url('./BrushType-SemiBold/?#iefix') format('embedded-opentype'),
     url('./BrushType-SemiBold/BrushType-SemiBold.woff2') format('woff2'),
     url('./BrushType-SemiBold/BrushType-SemiBold.woff') format('woff'),
@@ -31,10 +31,10 @@
 
 @font-face {
   font-family: 'Cleopatra';
-  src: url('./Cleopatra/');
+  src: url('./Cleopatra/Cleopatra.eot');
   src: url('./Cleopatra/?#iefix') format('embedded-opentype'),
     url('./Cleopatra/Cleopatra.woff2') format('woff2'),
-    url('Cleopatra.woff') format('woff'),
+    url('./Cleopatra/Cleopatra.woff') format('woff'),
     url('./Cleopatra/Cleopatra.ttf') format('truetype'),
     url('./Cleopatra/Cleopatra.svg#Cleopatra') format('svg');
   font-weight: normal;
