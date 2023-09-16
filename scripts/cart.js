@@ -1,6 +1,6 @@
 function renderCart(items) {
-  const $cart = document.querySelector(".cart");
-  const $total = document.querySelector(".total");
+  const $cart = document.querySelector('.cart');
+  const $total = document.querySelector('.total');
   $cart.innerHTML = items
     .map(
       (item) => `
@@ -20,98 +20,225 @@ function renderCart(items) {
         <td class="text-right"><Button class="" onClick="cartLS.remove(${item.id})">Delete</Button></td>
       </tr>`
     )
-    .join("");
-  $total.innerHTML = "$" + cartLS.total();
+    .join('');
+  $total.innerHTML = cartLS.total() + '₽';
 }
+
 renderCart(cartLS.list());
 cartLS.onChange(renderCart);
 
 function renderProducts(items) {
-  const $list = document.querySelector(".products-list");
-  $list.innerHTML = items
+  const $list = document.querySelector('.products-list');
+  $list.innerHTML += items
     .map(
       (item) => `
-      <li class="cart-item">
-            <h4>${item.name}</h4>
-            <div class="cart-desc">
-              <img
-                src="${item.img}"
-                alt="img"
-              />
-              <p>${item.desc}</p>
-              <p>${item.price}</p>
-              <button onclick="cartLS.add({id:${item.id}, name: '${item.name}', price: ${item.price}})">
-                add to cart
-              </button>
-            </div>
-          </li>`
+    <li class="cart-item bg-brown-light h-max">
+      <div class="cart-desc flex flex-col items-center gap-3 ">
+        <img
+        class="cart-img"
+          src="${item.img}"
+          alt="img"
+        />
+        <h6 class="cacke-name">${item.name}</h6>
+        <p class="cacke-desc">${item.desc}</p>
+
+        <button class="cart-button h-7 w-9 transition" onclick="$(this).parent().find('.cart-desc-2').slideToggle(); $(this).toggleClass('rotate-180')">
+          <img src="../images/red-arrow.svg" alt="" class="h-7 w-8" />
+        </button>
+        <div class="cart-desc-2 hidden w-full"> 
+        ${
+          'variants' in item
+            ? `<ol><h5>Варианты: </h5>` +
+              item.variants.map((variant) => `<li>${variant}</li>`).join('') +
+              `</ol>`
+            : ''
+        }
+        ${
+          'deco' in item
+            ? `<ul><h6>Декор: </h6>` +
+              item.deco.map((item) => `<li>${item}</li>`).join('') +
+              `</ul>`
+            : ''
+        }
+        ${
+          'stuff' in item
+            ? `<ul><h6>Начинка: </h6>` +
+              item.stuff.map((item) => `<li>${item}</li>`).join('') +
+              `</ul>`
+            : ''
+        }
+        ${
+          'persons' in item
+            ? `<ul><h6>Кол-во персон: </h6>` +
+              item.persons.map((item) => `<li>${item}</li>`).join('') +
+              `</ul>`
+            : ''
+        }
+        ${
+          'reasons' in item
+            ? `<ul> <h6>Повод: </h6>` +
+              item.reasons.map((item) => `<li>${item}</li>`).join('') +
+              `</ul>`
+            : ''
+        }
+        <p>Состав: ${item.ingredients}</p>
+        ${
+          'glutenEggFree' in item
+            ? `<p>Состав без яиц и глютена: ` + item.glutenEggFree + `</p>`
+            : ''
+        }
+        </div>
+        ${
+          'minPieces' in item
+            ? `<p>${item.price} руб/шт </p>
+          <p>Минимальный заказ ${item.minPieces} шт.</p>`
+            : `<p> ${item.price} руб за кг</p>`
+        }
+        <button class="btn-primary text-xl w-4/5" onclick="cartLS.add({id:${
+          item.id
+        }, name: '${item.name}', price: ${item.price}})">
+          add to cart
+        </button>
+      </div>
+
+    </li>`
     )
-    .join("");
+    .join('');
 }
+
 const products = [
   {
     id: 1,
-    name: "shoko",
-    price: 500,
-    img: "https://sun9-33.userapi.com/impf/c854028/v854028949/157b45/szZ5-iY9JG8.jpg?size=807x675&quality=96&sign=61bfe36c84a01781c322fcf7bcf487f8&c_uniq_tag=sWY43dK7xmR5JbU75PeYYezjVmpMcSOhbZpkP47xjmw&type=album",
-    desc: "test description",
-    alt: "test alt",
+    name: 'ПП Фрезье',
+    price: 400,
+    img: '../images/Cacke 1 (2).jpg',
+    variants: ['с клубникой', 'с киви', 'чистый'],
+    desc: 'Это нежный французский тортик, который состоит из рисового бисквита и заварного сливочно-ванильного крема на основе маскарпоне, рикотты и кремчиза.',
+    ingredients:
+      'яйца, молоко, маскарпоне, кремчиз, рикотта, мягкий творог, рисовая мука, куукрузный крахмал, мед, сода, сок лимона, желатин',
+    alt: 'test alt',
   },
   {
     id: 2,
-    name: "shoko2",
-    price: 700,
-    img: "https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg",
-    desc: "test description",
-    alt: "test alt",
+    name: 'ПП Сюрприз ',
+    price: 400,
+    img: 'https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg',
+    // variants: ["с клубникой", "с киви", "чистый"],
+    desc: 'Это бесподобный шоколадный торт без сахара, без глютена, без лактозы. Сочные шоколадные коржи, бархатистый кешью крем с вишневым мармеладом и сверху нежный шоколадный крем, это нереальное сочетание текстур, пользы и вкуса.',
+    variants: ['вегетарианский (без яиц)', 'классический'],
+    ingredients:
+      'мука кукурузная, рисовая, льняная, бананы, финики, вишня, кешью, яйца, мед, какао/кэроб, сода, сок лимона, желатин/агар',
+    alt: 'test alt',
   },
   {
     id: 3,
-    name: "shoko3",
-    price: 100,
-    img: "https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg",
-    desc: "test description",
-    alt: "test alt",
+    name: 'ПП Баунти',
+    price: 380,
+    img: 'https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg',
+    deco: ['Орехами', 'Индивидуальный (укажите в комментарии к заказу)'],
+    desc: 'Это всем знакомое вкуснейшее сочетание: сладко-сливочной кокосовой мякоти и молочного шоколада, только теперь еще и с пользой для Вашего здоровья. ПП Баунти - это райское наслаждение с заботой о Вашей фигуре.',
+    ingredients:
+      'овсяная и кукурузная мука, яйца, йогурт, молоко, кокосовая стружка, какао, мед, кокосовая паста, кукурузный крахмал, рисовая мука, сода',
+    alt: 'test alt',
   },
   {
     id: 4,
-    name: "shoko4",
-    price: 100,
-    img: "https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg",
-    desc: "test description",
-    alt: "test alt",
+    name: 'ПП Брауни',
+    price: 350,
+    img: 'https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg',
+    deco: [
+      'Орехами',
+      'Сезонными фруктами',
+      'Индивидуальный (укажите в комментарии к заказу)',
+    ],
+    desc: 'Это очень нежный низкокалорийный десерт с интенсивным вкусом шоколада без использования муки, покрытый глазурью из настоящего крафтового шоколада без сахара. ПП Брауни – это истинное наслаждение для любителей и ценителей шоколада.',
+    ingredients:
+      'яйца, бананы, какао, кокосовая стружка, натуральный крафтовый шоколад без сахара, сливки, мед.',
+    alt: 'test alt',
   },
   {
     id: 5,
-    name: "shoko5",
-    price: 100,
-    img: "https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg",
-    desc: "test description",
-    alt: "test alt",
+    name: 'ПП Наполеон',
+    price: 380,
+    img: 'https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg',
+    deco: [
+      'Шоколадом',
+      'Сезонными фруктами',
+      'Индивидуальный (укажите в комментарии к заказу)',
+    ],
+    variants: ['классический', 'шоколадный'],
+    desc: 'Это многослойный тортик с заварным сливочным кремом и тонкими мягкими коржами. Без использования белой муки, сахара и масла. ',
+    ingredients:
+      'мука ц/з пшеничная, миндальная мука, яйца, кукурузный крахмал, молоко, рикотта, мед, нерафинированное кокосовое масло первого холодного отжима, сода',
+    alt: 'test alt',
   },
   {
     id: 6,
-    name: "shoko6",
-    price: 100,
-    img: "https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg",
-    desc: "test description",
-    alt: "test alt",
+    name: 'ПП Медовик',
+    price: 380,
+    img: 'https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg',
+    deco: [
+      'Шоколадом',
+      'Сезонными фруктами',
+      'Индивидуальный (укажите в комментарии к заказу)',
+    ],
+    stuff: ['Вишня', 'Грецкий орех', 'Без начинки'],
+    variants: ['Классический', 'Шоколадный'],
+    desc: 'Это полезный, безупречно пропитанный, невероятно мягкий многослойный тортик с тонкими коржами и с заварным сливочным кремом. Без использования белой муки, сахара и масла. Без глютена. ',
+    ingredients: 'мука кукурузная, яйца, мед, йогурт, молоко, рисовая мука',
+    alt: 'test alt',
   },
   {
     id: 7,
-    name: "shoko6",
-    price: 100,
-    img: "https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg",
-    desc: "test description",
-    alt: "test alt",
+    name: 'Бенто-тортик',
+    price: 99999,
+    img: 'https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg',
+    deco: ['', ''],
+    variants: ['с клубникой', 'с киви', 'чистый'],
+    persons: [1, 2],
+    reasons: ['День Рождения', 'Просто хороший день'],
+    desc: 'Это мини-тортик на 1-2 человек, который можно преподнести в подарок учителю, врачу, подруге или своему ребенку. Только представьте, как приятно, что целый торт для Вас одного! Такой тортик упаковывается в биоразлагаемую порционную коробочку и сразу укомплектован эко ложкой. Вес такого тортика составляет примерно 0,5 кг. ',
+    ingredients: '',
+    alt: 'test alt',
   },
   {
     id: 8,
-    name: "shoko6",
+    minPieces: 2,
+    name: 'Cake to go ',
     price: 100,
-    img: "https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg",
-    desc: "test description",
-    alt: "test alt",
+    img: 'https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg',
+    variants: ['Наполеон', '	Медовик', '	Баунти', 'Фрезье', '	Сюрприз'],
+    desc: 'Это прекрасный десерт, который удобно везде взять с собой и скушать в любое время. Это оригинальный способ подачи классического торта. Он представляет собой многослойную композицию, собранную в стакане и укомплектованную ложечкой. Легко удивить и порадовать таким десертом, преподнеся его на подставке с кофе из любимой кофейни. Вес торта 250 г. ',
+    ingredients: '',
+    alt: 'test alt',
+  },
+  {
+    id: 9,
+    name: 'ПП Кексы',
+    price: 265,
+    img: 'https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg',
+    desc: 'Нежные и пышные (без дрожжевые) кексы без сахара – это идеальное лакомство для тех, кто следит за своим здоровьем. Эти кексы позволяют насладиться вкусом домашней выпечки без ущерба Вашей фигуре. Каждый кекс станет настоящим угощением для вас и ваших близких. <br> Кексы приготовлены с любовью, с использованием только натуральных ингредиентов, которые делают их полезными и питательными, богатыми белком и клетчаткой. У каждого кекса идеальная текстура и нежный аромат.  <br> Эти кексы также могут быть адаптированы под ваши предпочтения, например, без яиц или без глютена, с изюмом или без. <br> Не отказывайте себе в удовольствии насладиться вкусом десерта, даже если вы следите за своим питанием. Попробуйте эти нежные без дрожжевые кексы без сахара и они станут Вашим новым любимым лакомством! ',
+    ingredients:
+      'яйца, финики, мука цельнозерновая пшеничная и рисовая, йогурт классический, молоко, кукурузный крахмал, сода',
+    glutenEggFree:
+      'льняная, кокосовая, миндальная, рисовая и мука зеленой гречки, йогурт, изюм, кокосовая стружка, сливки, сода',
+    alt: 'test alt',
+  },
+  {
+    id: 10,
+    name: 'ПП эклеры ',
+    price: 350,
+    img: 'https://img1.zakaz.md/upload.version_1.0.c1a692f739d85cc2292bb88a54340556.350x350.jpeg',
+    variants: [
+      'шоколадно-банановый заварной крем',
+      'сливочный заварной крем на основе рикотты, маскорпоне и кремчиза',
+      'творожный крем',
+      'заварной сливочно-кокосовый крем',
+    ],
+    desc: 'Представьте себе нежное облачко из воздушного теста, приготовленного из самой качественной цельнозерновой муки, которая бережно сохраняет все полезные свойства зерна. Каждый эклер - это настоящий шедевр, созданный с любовью и заботой о Вашем здоровье. <br>Каждый эклер украшен глазурью из настоящего крафтового шоколада без сахара, который готовлю сама из какао бобов, а внутри нежный заварной крем.  <br>Мои эклеры без сахара на цельнозерновой муке - это не только сладкое удовольствие, но и забота о Вашем здоровье. Позвольте себе насладиться этими изысканными десертами, не беспокоясь о лишних калориях и сахаре. Они идеально подходят для людей, следящих за своим питанием, но не желающих отказываться от настоящего гастрономического наслаждения. <br>Попробуйте мои эклеры без сахара и окунитесь в мир вкуса и элегантности, который я создала специально для Вас!',
+    ingredients:
+      'яйца, цельнозерновая пшеничная мука, соль, шоколадная глазурь (какао тертое, масло какао, сливки, мед, агар-агар), крем.',
+    alt: 'test alt',
   },
 ];
 renderProducts(products);

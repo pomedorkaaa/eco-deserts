@@ -38,7 +38,7 @@ var cartLS = (function (a) {
               Object.defineProperty(
                 a,
                 c,
-                Object.getOwnPropertyDescriptor(b, c)
+                Object.getOwnPropertyDescriptor(b, c),
               );
             });
     return a;
@@ -117,14 +117,14 @@ var cartLS = (function (a) {
       return k(
         j().filter(function (b) {
           return b.id !== a;
-        })
+        }),
       );
     },
     p = function (a, b, c) {
       return k(
         j().map(function (e) {
           return e.id === a ? d({}, e, f({}, b, c)) : e;
-        })
+        }),
       );
     },
     q = function (a) {
@@ -148,8 +148,8 @@ var cartLS = (function (a) {
               j().concat(
                 d({}, a, {
                   quantity: b || 1,
-                })
-              )
+                }),
+              ),
             )
         : null;
     }),
